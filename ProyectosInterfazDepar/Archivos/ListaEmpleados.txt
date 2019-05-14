@@ -1,0 +1,8 @@
+*1-Pedro Pérez Leal	-Avenida de Irún s/n	-Director
+*2-Pedro López Ramirez	-Avenida de Santiago s/n	-Director
+*3-Pedro Martínez Merino	-Avenida de Irún s/n	-Técnico
+*4-Alvaro Perez	-Uno 2	-Técnico
+*5-Enrique García	-Dos 4	-Comercial
+*6- Gutiérrez Lillo	- de la Industria 2	-Administrativo
+*7- Arza Balvín	- del Centro 3	-Director
+*8-Andrés Quintero García	-Avenida del Centro 4	-Investigador
