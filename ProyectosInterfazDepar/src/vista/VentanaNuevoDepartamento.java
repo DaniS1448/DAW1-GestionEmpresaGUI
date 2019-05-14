@@ -33,7 +33,7 @@ public class VentanaNuevoDepartamento extends JDialog{
 	public void inicializarComponentes() {
 		
 		JButton btnCrearNuevoDepartamento = new JButton("CREAR DEPARTAMENTO");
-		btnCrearNuevoDepartamento.setBounds(194, 205, 162, 23);
+		btnCrearNuevoDepartamento.setBounds(177, 249, 204, 40);
 		getContentPane().add(btnCrearNuevoDepartamento);
 		
 		variables.put("btnCrearNuevoDepartamento", btnCrearNuevoDepartamento);
@@ -41,7 +41,7 @@ public class VentanaNuevoDepartamento extends JDialog{
 		btnCrearNuevoDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		jtfNombreDepartamento = new JTextField();
-		jtfNombreDepartamento.setBounds(194, 26, 162, 20);
+		jtfNombreDepartamento.setBounds(200, 146, 162, 20);
 		getContentPane().add(jtfNombreDepartamento);
 		jtfNombreDepartamento.setColumns(10);
 		

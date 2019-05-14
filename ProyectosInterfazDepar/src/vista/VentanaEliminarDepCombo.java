@@ -40,7 +40,7 @@ public class VentanaEliminarDepCombo extends JDialog{
 	public void inicializarComponentes() {
 		
 		JButton btnEliminarElDepartamento = new JButton("ELIMINAR DEPARTAMENTO");
-		btnEliminarElDepartamento.setBounds(194, 205, 162, 23);
+		btnEliminarElDepartamento.setBounds(138, 241, 282, 40);
 		getContentPane().add(btnEliminarElDepartamento);
 		
 		variables.put("btnEliminarElDepCombo", btnEliminarElDepartamento);
@@ -48,7 +48,7 @@ public class VentanaEliminarDepCombo extends JDialog{
 		btnEliminarElDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(194, 41, 162, 23);
+		comboBox.setBounds(182, 66, 184, 40);
 		getContentPane().add(comboBox);		
 		
 		try {

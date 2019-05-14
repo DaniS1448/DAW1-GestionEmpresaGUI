@@ -33,7 +33,7 @@ public class VentanaEliminarDepartamento extends JDialog{
 	public void inicializarComponentes() {
 		
 		JButton btnEliminarElDepartamento = new JButton("ELIMINAR DEPARTAMENTO");
-		btnEliminarElDepartamento.setBounds(194, 205, 162, 23);
+		btnEliminarElDepartamento.setBounds(175, 261, 247, 40);
 		getContentPane().add(btnEliminarElDepartamento);
 		
 		variables.put("btnEliminarElDepartamento", btnEliminarElDepartamento);
@@ -41,7 +41,7 @@ public class VentanaEliminarDepartamento extends JDialog{
 		btnEliminarElDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		jtfNombreDepartamento = new JTextField();
-		jtfNombreDepartamento.setBounds(194, 26, 162, 20);
+		jtfNombreDepartamento.setBounds(212, 122, 162, 20);
 		getContentPane().add(jtfNombreDepartamento);
 		jtfNombreDepartamento.setColumns(10);
 		
