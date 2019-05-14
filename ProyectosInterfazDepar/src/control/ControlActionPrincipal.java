@@ -147,16 +147,13 @@ public class ControlActionPrincipal implements ActionListener{
 						
 		}
 		else if(opcion.equals("btnEliminarElDepCombo")) {
-			String departamento = (String)(((JComboBox)variables.get("comboBox")).getSelectedItem());
+			Departamento departamento = (Departamento)(((JComboBox<Departamento>)variables.get("comboBox")).getSelectedItem());
 
-			if (departamento.isEmpty()) {
-				JOptionPane.showMessageDialog(jd, "ERROR, debes escribir un nombre de departamento ", "ERROR", JOptionPane.ERROR_MESSAGE);
-			}else {
 				JOptionPane.showMessageDialog(jd, "Se va a eliminar el departamento: "+departamento, "EXITO", JOptionPane.INFORMATION_MESSAGE);
 				boolean estado=false;
 				try {
 					BBDDps enlaceBD=new BBDDps();
-					int id = enlaceBD.seleccionarCodDepartamento(departamento);
+					int id = departamento.getCodDepartamento();
 					estado = enlaceBD.eliminarDepartamento(id);
 				} catch (SQLException e) {
 					
@@ -168,9 +165,7 @@ public class ControlActionPrincipal implements ActionListener{
 					jd.dispose();
 				} else {
 					JOptionPane.showMessageDialog(jd, "ERROR, no se ha podido eliminar el departamento: "+departamento, "ERROR", JOptionPane.ERROR_MESSAGE);
-				}
-			}
-			
+				}			
 		}
 		
 	}

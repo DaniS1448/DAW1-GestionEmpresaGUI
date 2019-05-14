@@ -47,7 +47,7 @@ public class VentanaEliminarDepCombo extends JDialog{
 		btnEliminarElDepartamento.setActionCommand("btnEliminarElDepCombo");
 		btnEliminarElDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
-		JComboBox comboBox = new JComboBox();
+		JComboBox<Departamento> comboBox = new JComboBox<Departamento>();
 		comboBox.setBounds(182, 66, 184, 40);
 		getContentPane().add(comboBox);		
 		
@@ -57,7 +57,7 @@ public class VentanaEliminarDepCombo extends JDialog{
 			
 			if(departamentos.size()>0) {
 				for(Departamento d : departamentos) {
-					comboBox.addItem(d.getNomDepartamento());
+					comboBox.addItem(d);
 				}
 			} else {
 				JOptionPane.showMessageDialog(this, "ERROR, el fichero no contiene departamentos ", "ERROR", JOptionPane.ERROR_MESSAGE);
