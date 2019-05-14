@@ -39,8 +39,7 @@ public class VentanaPrincipal extends JFrame{
 		btnNuevoDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		
-		JButton btnEliminarDepartamento = new JButton("ELIMINAR DEPARTAMENTO");
-		btnEliminarDepartamento.setActionCommand("btnNuevoDepartamento");
+		JButton btnEliminarDepartamento = new JButton("ELIMINAR DEPARTAMENTO CON JTextField");
 		btnEliminarDepartamento.setBounds(185, 62, 210, 23);
 		getContentPane().add(btnEliminarDepartamento);
 		
@@ -49,7 +48,6 @@ public class VentanaPrincipal extends JFrame{
 		btnEliminarDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		JButton btnCargarDepartamentos = new JButton("CARGAR DEPARTAMENTOS");
-		btnCargarDepartamentos.setActionCommand("btnNuevoDepartamento");
 		btnCargarDepartamentos.setBounds(185, 96, 210, 23);
 		getContentPane().add(btnCargarDepartamentos);
 		

@@ -9,12 +9,12 @@ import javax.swing.JTextField;
 
 import control.ControlActionPrincipal;
 
-public class VentanaNuevoDepartamento extends JDialog{
+public class VentanaEliminarDepartamento extends JDialog{
 	
 	private Map<String,Object> variables = new HashMap<String, Object>();
 	private JTextField jtfNombreDepartamento;
 	
-	public VentanaNuevoDepartamento() {
+	public VentanaEliminarDepartamento() {
 		
 		configurarVentana();
 		inicializarComponentes();
@@ -22,7 +22,7 @@ public class VentanaNuevoDepartamento extends JDialog{
 	
 	public void configurarVentana() {
 		
-		this.setTitle("NUEVO DEPARTAMENTO - GESTIÓN DE EMPRESA - DaniS");
+		this.setTitle("ELIMINAR DEPARTAMENTO - GESTIÓN DE EMPRESA - DaniS");
 		this.setBounds(100,100,600,400);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setAlwaysOnTop(true);
@@ -32,13 +32,13 @@ public class VentanaNuevoDepartamento extends JDialog{
 	
 	public void inicializarComponentes() {
 		
-		JButton btnCrearNuevoDepartamento = new JButton("CREAR DEPARTAMENTO");
-		btnCrearNuevoDepartamento.setBounds(194, 205, 162, 23);
-		getContentPane().add(btnCrearNuevoDepartamento);
+		JButton btnEliminarElDepartamento = new JButton("ELIMINAR DEPARTAMENTO");
+		btnEliminarElDepartamento.setBounds(194, 205, 162, 23);
+		getContentPane().add(btnEliminarElDepartamento);
 		
-		variables.put("btnCrearNuevoDepartamento", btnCrearNuevoDepartamento);
-		btnCrearNuevoDepartamento.setActionCommand("btnCrearNuevoDepartamento");
-		btnCrearNuevoDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
+		variables.put("btnEliminarElDepartamento", btnEliminarElDepartamento);
+		btnEliminarElDepartamento.setActionCommand("btnEliminarElDepartamento");
+		btnEliminarElDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		jtfNombreDepartamento = new JTextField();
 		jtfNombreDepartamento.setBounds(194, 26, 162, 20);
