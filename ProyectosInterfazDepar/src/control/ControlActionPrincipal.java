@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -16,6 +18,7 @@ import javax.swing.JTextField;
 import dao.BBDDps;
 import dao.Ficheros;
 import modelo.Departamento;
+import vista.VentanaEliminarDepCombo;
 import vista.VentanaEliminarDepartamento;
 import vista.VentanaNuevoDepartamento;
 
@@ -71,7 +74,7 @@ public class ControlActionPrincipal implements ActionListener{
 			}
 			
 		}
-		if (opcion.equals("btnEliminarDepartamento")) {
+		else if (opcion.equals("btnEliminarDepartamento")) {
 			//jf.setVisible(false);;
 			VentanaEliminarDepartamento v = new VentanaEliminarDepartamento();
 			v.setVisible(true);
@@ -103,7 +106,7 @@ public class ControlActionPrincipal implements ActionListener{
 			}
 			
 		}
-		if (opcion.equals("btnCargarDepartamentos")) {
+		else if (opcion.equals("btnCargarDepartamentos")) {
 			
 			List<Departamento> listaD = new ArrayList<Departamento>();
 			List<String> lecturaFichero = new ArrayList<String>();
@@ -137,8 +140,38 @@ public class ControlActionPrincipal implements ActionListener{
 				JOptionPane.showMessageDialog(jf, "ERROR, el fichero no contiene departamentos ", "ERROR", JOptionPane.ERROR_MESSAGE);
 			}
 		}
-		
-		
+		else if (opcion.equals("btnEliminarDepCombo")) {
+			//jf.setVisible(false);
+			VentanaEliminarDepCombo v = new VentanaEliminarDepCombo();
+			v.setVisible(true);
+						
+		}
+		else if(opcion.equals("btnEliminarElDepCombo")) {
+			String departamento = (String)(((JComboBox)variables.get("comboBox")).getSelectedItem());
+
+			if (departamento.isEmpty()) {
+				JOptionPane.showMessageDialog(jd, "ERROR, debes escribir un nombre de departamento ", "ERROR", JOptionPane.ERROR_MESSAGE);
+			}else {
+				JOptionPane.showMessageDialog(jd, "Se va a eliminar el departamento: "+departamento, "EXITO", JOptionPane.INFORMATION_MESSAGE);
+				boolean estado=false;
+				try {
+					BBDDps enlaceBD=new BBDDps();
+					int id = enlaceBD.seleccionarCodDepartamento(departamento);
+					estado = enlaceBD.eliminarDepartamento(id);
+				} catch (SQLException e) {
+					
+					e.printStackTrace();
+				}
+				
+				if(estado) {
+					JOptionPane.showMessageDialog(jd, "El departamento: "+departamento+" se ha eliminado correctamente", "EXITO", JOptionPane.INFORMATION_MESSAGE);
+					jd.dispose();
+				} else {
+					JOptionPane.showMessageDialog(jd, "ERROR, no se ha podido eliminar el departamento: "+departamento, "ERROR", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			
+		}
 		
 	}
 }

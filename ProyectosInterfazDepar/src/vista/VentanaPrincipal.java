@@ -31,7 +31,7 @@ public class VentanaPrincipal extends JFrame{
 	public void inicializarComponentes() {
 		
 		JButton btnNuevoDepartamento = new JButton("NUEVO DEPARTAMENTO");
-		btnNuevoDepartamento.setBounds(185, 28, 210, 23);
+		btnNuevoDepartamento.setBounds(161, 28, 265, 23);
 		getContentPane().add(btnNuevoDepartamento);
 		
 		variables.put("btnNuevoDepartamento", btnNuevoDepartamento);
@@ -40,7 +40,7 @@ public class VentanaPrincipal extends JFrame{
 		
 		
 		JButton btnEliminarDepartamento = new JButton("ELIMINAR DEPARTAMENTO CON JTextField");
-		btnEliminarDepartamento.setBounds(185, 62, 210, 23);
+		btnEliminarDepartamento.setBounds(161, 62, 265, 23);
 		getContentPane().add(btnEliminarDepartamento);
 		
 		variables.put("btnEliminarDepartamento", btnEliminarDepartamento);
@@ -48,12 +48,20 @@ public class VentanaPrincipal extends JFrame{
 		btnEliminarDepartamento.addActionListener(new ControlActionPrincipal(this, variables));
 		
 		JButton btnCargarDepartamentos = new JButton("CARGAR DEPARTAMENTOS");
-		btnCargarDepartamentos.setBounds(185, 96, 210, 23);
+		btnCargarDepartamentos.setBounds(161, 96, 265, 23);
 		getContentPane().add(btnCargarDepartamentos);
 		
 		variables.put("btnCargarDepartamentos", btnCargarDepartamentos);
 		btnCargarDepartamentos.setActionCommand("btnCargarDepartamentos");
 		btnCargarDepartamentos.addActionListener(new ControlActionPrincipal(this, variables));
+		
+		JButton btnEliminarDepCombo = new JButton("ELIMINAR DEPARTAMENTO CON ComboBox");
+		btnEliminarDepCombo.setBounds(161, 130, 265, 23);
+		getContentPane().add(btnEliminarDepCombo);
+		
+		variables.put("btnEliminarDepCombo", btnEliminarDepCombo);
+		btnEliminarDepCombo.setActionCommand("btnEliminarDepCombo");
+		btnEliminarDepCombo.addActionListener(new ControlActionPrincipal(this, variables));
 		
 	}
 }
