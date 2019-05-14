@@ -31,7 +31,7 @@ private static Scanner sc = new Scanner(System.in);
 		int opcion;
 		opcion = 0;
 		System.out.println("-------PROYECTO EMPLEADOS Y DEPARTAMENTOS-----");
-		System.out.println("Elija el nÃºmero de opciÃ³n que desee:");
+		System.out.println("Elija el número de opción que desee:");
 	/*	System.out.println("OPCION 1: NUEVO EMPLEADO");
 		System.out.println("OPCION 2: MODIFICAR DATOS DE EMPLEADO");
 		System.out.println("OPCION 3: ELIMINAR UN EMPLEADO");

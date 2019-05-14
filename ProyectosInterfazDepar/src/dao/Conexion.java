@@ -10,7 +10,7 @@ public class Conexion {
 	    private String jdbcURL;
 	    private String jdbcUsername;
 	    private String jdbcPassword;
-	    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+	    private static final String DRIVER = "com.mysql.jdbc.Driver";
 	    
 	    public Conexion(String jdbcURL, String jdbcUsername, String jdbcPassword) {
 			this.jdbcURL = jdbcURL;

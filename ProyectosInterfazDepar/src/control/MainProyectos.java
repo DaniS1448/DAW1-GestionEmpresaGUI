@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.sql.SQLException;
 import vista.Entrada;
 import vista.Salida;
+import vista.VentanaPrincipal;
 
 public class MainProyectos {
 
 	public static void main(String[] args) {
+		
+		VentanaPrincipal vp = new VentanaPrincipal();
+		vp.setVisible(true);
 
-		try {
+		/*try {
 			// -----------OPCIONES DE
 			// MEN√ö---------------------------------------------------------
 			int opcion = 0;
@@ -28,7 +32,7 @@ public class MainProyectos {
 					Salida.finalizar();
 					break;
 				default:
-					System.out.println("Opci√≥n no v√°lida");
+					System.out.println("OpciÛn no v·lida");
 				}
 
 			}
@@ -38,7 +42,7 @@ public class MainProyectos {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 	
